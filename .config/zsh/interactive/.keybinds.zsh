@@ -8,8 +8,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[3~" delete-char
 bindkey "^[[4~" end-of-line
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 bindkey "^[[F" end-of-line
 bindkey "^[[H" beginning-of-line
 #   Make Alt-Backspace delete words, as opopsed to Ctrl-W's Words (think Vim)
