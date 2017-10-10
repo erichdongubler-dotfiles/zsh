@@ -23,12 +23,13 @@ compinit
 .reload_interactive_extensions sh
 .reload_interactive_extensions zsh
 
-# Do open/close delimiter completion
-zplug "hlissner/zsh-autopair", defer:1
-
 # Completions menu and some command validation while typing
 zstyle ':completion:*' menu select
 zplug "zdharma/fast-syntax-highlighting"
+setopt correct
+__git_files () {
+    _wanted files expl 'local files' _files
+}
 
 # Nicer file management
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
