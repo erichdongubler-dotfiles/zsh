@@ -11,8 +11,6 @@ if [[ ! -d ~/.zplug ]]; then
 else
     . ~/.zplug/init.zsh
 fi
-
-# Make zplug manage itself
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # `compinit` should be one of the first things here
@@ -29,10 +27,9 @@ setopt correct
 __git_files () {
     _wanted files expl 'local files' _files
 }
-
-# Nicer file management
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
+# Nice prompt
 autoload -U colors && colors
 setopt PROMPT_SUBST
 export __ps1_path="%{%B%F{blue}%}%(4~|%-1~/…/%2~|%3~)"
