@@ -1,4 +1,3 @@
 . ~/.profile
-.reload_login_extensions sh
-.reload_login_extensions zsh
+.reload_login_extensions sh zsh
 [[ -f ~/.zshrc ]] && . ~/.zshrc

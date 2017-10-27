@@ -20,8 +20,7 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 
-.reload_interactive_extensions sh
-.reload_interactive_extensions zsh
+.reload_interactive_extensions sh zsh
 
 # Completions menu and some command validation while typing
 zstyle ':completion:*' menu select
