@@ -1,9 +1,5 @@
 [[ $- != *i* ]] && return # If not running interactively, don't do anything
 
-.reload_interactive_config() {
-	. "$HOME/.zshrc"
-}
-
 # Ensure zplug is installed
 if [[ ! -d ~/.zplug ]]; then
     git clone https://github.com/zplug/zplug ~/.zplug
