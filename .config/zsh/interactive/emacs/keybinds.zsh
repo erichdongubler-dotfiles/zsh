@@ -1,6 +1,3 @@
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
 # FIXME: These could maybe use zkbd or terminfo? Is it slow, maybe?
 bindkey -e
 bindkey "^[[1;5C" forward-word
@@ -12,7 +9,7 @@ bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 bindkey "^[[F" end-of-line
 bindkey "^[[H" beginning-of-line
-#   Make Alt-Backspace delete words, as opopsed to Ctrl-W's Words (think Vim)
+#   Make Alt-Backspace delete words, as opposed to Ctrl-W's Words (think Vim)
 backward-kill-dir () {
     local WORDCHARS="${WORDCHARS:s#/#}"
     local WORDCHARS="${WORDCHARS:s#\.#}"
