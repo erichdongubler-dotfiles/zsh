@@ -1,5 +1,4 @@
 autoload -U colors && colors
-setopt PROMPT_SUBST
 export __ps1_path="%{%B%F{blue}%}%(4~|%-1~/…/%2~|%3~)"
 export __ps1_dollar="%{%(?.%F{green}.%F{yellow})%}$"
 __ps1_git() {
