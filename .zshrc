@@ -16,11 +16,6 @@ else
 fi
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
-# `compinit` should be one of the first things here
-zstyle :compinstall filename "$HOME/.zshrc"
-autoload -Uz compinit
-compinit
-
 setopt PROMPT_SUBST # XXX: Any way to move this into .prompt.zsh?
 
 .reload_interactive_extensions sh zsh
