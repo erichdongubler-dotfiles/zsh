@@ -29,6 +29,7 @@ zle -N down-line-or-beginning-search
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1~" beginning-of-line
+bindkey "^[[3~" delete-char
 bindkey "^[[4~" end-of-line
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
@@ -37,6 +38,7 @@ bindkey "^[[H" beginning-of-line
 bindkey -M vicmd "^[[1;5C" forward-word
 bindkey -M vicmd "^[[1;5D" backward-word
 bindkey -M vicmd "^[[1~" beginning-of-line
+bindkey -M vicmd "^[[3~" delete-char
 bindkey -M vicmd "^[[4~" end-of-line
 bindkey -M vicmd "^[[A" history-beginning-search-backward
 bindkey -M vicmd "^[[B" history-beginning-search-forward
