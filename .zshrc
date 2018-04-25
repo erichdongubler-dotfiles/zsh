@@ -8,11 +8,17 @@ fi
 
 [[ $- != *i* ]] && return
 
-if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    . ~/.zplug/init.zsh && zplug update --self
+ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
+
+ZPLUG_BIN="$ZPLUG_HOME/bin"
+ZPLUG_CACHE_DIR="$ZPLUG_HOME/cache_dir"
+ZPLUG_REPOS="$ZPLUG_HOME/repos"
+
+if [[ ! -d "$ZPLUG_HOME" ]]; then
+    git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
+    . "$ZPLUG_HOME"/init.zsh && zplug update
 else
-    . ~/.zplug/init.zsh
+    . "$ZPLUG_HOME"/init.zsh
 fi
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
