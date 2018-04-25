@@ -56,6 +56,7 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^W' backward-kill-dir
+# Fix other keybinds
 #   Add more text objects
 autoload -U select-bracketed select-quoted
 zle -N select-bracketed
