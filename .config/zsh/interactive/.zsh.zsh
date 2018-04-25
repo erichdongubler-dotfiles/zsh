@@ -3,6 +3,8 @@ export HISTFILE="$XDG_CACHE_HOME/zsh/histfile"
 alias ll='ls -l --color=auto --time-style='"'+%d-%m-%Y %H:%M:%S'"
 
 zplug "${0:a:h}/zsh", use:"keybinds-vi.zsh", from:local
+zplug "hlissner/zsh-autopair", defer:2
+
 zplug "${0:a:h}/zsh", use:"prompt.zsh", from:local
 zstyle ':completion:*' menu select
 zplug "zdharma/fast-syntax-highlighting", defer:2
