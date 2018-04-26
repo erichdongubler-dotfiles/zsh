@@ -14,4 +14,5 @@ __git_files () {
     _wanted files expl 'local files' _files
 }
 
+export _FASD_DATA="$XDG_CACHE_HOME/fasd"
 zplug "clvv/fasd", as:command, depth:1, use:fasd, hook-load:'eval \"\$(fasd --init auto)\" > /dev/null'
