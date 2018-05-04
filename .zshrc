@@ -1,4 +1,4 @@
-. "$XDG_CONFIG_HOME/sh/common.sh"
+. "$XDG_CONFIG_HOME/erichdongubler/sh/common.sh"
 
 nonomatch() {
     setopt localoptions
