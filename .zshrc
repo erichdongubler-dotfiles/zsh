@@ -1,9 +1,14 @@
 . "$XDG_CONFIG_HOME/sh/common.sh"
 
+nonomatch() {
+    setopt localoptions
+    unsetopt nomatch
+    "$@"
+}
+
 if [[ $- == *l* ]]; then
     .login
-    setopt local_options nomatch
-    .reload_login_extensions sh zsh
+    nonomatch .reload_login_extensions sh zsh
 fi
 
 [[ $- != *i* ]] && return
@@ -24,7 +29,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 setopt PROMPT_SUBST # XXX: Any way to move this into .prompt.zsh?
 
-.reload_interactive_extensions sh zsh
+nonomatch .reload_interactive_extensions sh zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
