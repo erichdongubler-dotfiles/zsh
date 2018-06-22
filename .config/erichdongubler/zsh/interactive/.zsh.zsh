@@ -1,4 +1,7 @@
-export HISTFILE="$XDG_CACHE_HOME/zsh/histfile"
+ZSH_CACHE="$XDG_CACHE_HOME/zsh"
+mkdir -p "$ZSH_CACHE"
+export HISTFILE="$ZSH_CACHE/histfile"
+unset ZSH_CACHE
 
 alias ll='ls -l --color=auto --time-style='"'+%d-%m-%Y %H:%M:%S'"
 
