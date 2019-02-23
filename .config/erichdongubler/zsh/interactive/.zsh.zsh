@@ -18,5 +18,5 @@ __git_files () {
 }
 
 export _FASD_DATA="$XDG_CACHE_HOME/fasd"
-zplug "clvv/fasd", as:command, depth:1, use:fasd, hook-load:'eval \"\$(fasd --init auto)\" > /dev/null'
+zplug "clvv/fasd", as:command, depth:1, use:fasd, hook-load:'eval \"\$(fasd --init auto)\"; unalias sd'
 zplug "so-fancy/diff-so-fancy", use:"third_party/build_fatpack/diff-so-fancy", as:command
