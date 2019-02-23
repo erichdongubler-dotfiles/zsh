@@ -13,11 +13,11 @@ fi
 
 [[ $- != *i* ]] && return
 
-ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
+export ZPLUG_HOME="$XDG_CACHE_HOME/zplug"
 
-ZPLUG_BIN="$ZPLUG_HOME/bin"
-ZPLUG_CACHE_DIR="$ZPLUG_HOME/cache_dir"
-ZPLUG_REPOS="$ZPLUG_HOME/repos"
+export ZPLUG_BIN="$ZPLUG_HOME/bin"
+export ZPLUG_CACHE_DIR="$ZPLUG_HOME/cache_dir"
+export ZPLUG_REPOS="$ZPLUG_HOME/repos"
 
 if [[ ! -d "$ZPLUG_HOME" ]]; then
     git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
